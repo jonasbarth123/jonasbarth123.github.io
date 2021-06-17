@@ -1,18 +1,3 @@
-/*
-\definecolor{colw}{RGB}{255,255,255}
-\definecolor{colb}{RGB}{  0,  0,  0}
-\definecolor{col0}{RGB}{158,  1, 66}
-\definecolor{col1}{RGB}{213, 62, 79}
-\definecolor{col2}{RGB}{244,109, 67}
-\definecolor{col3}{RGB}{253,174, 97}
-\definecolor{col4}{RGB}{254,224,139}
-\definecolor{col5}{RGB}{255,255,191}
-\definecolor{col6}{RGB}{230,245,152}
-\definecolor{col7}{RGB}{171,221,164}
-\definecolor{col8}{RGB}{102,194,165}
-\definecolor{col9}{RGB}{ 50,136,189}
-\definecolor{col10}{RGB}{94, 79,162} */
-
 :root{
     --col0: rgb(158,  1, 66);
     --col1: rgb(213, 62, 79);
@@ -29,12 +14,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-
 body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     /* background-color: rgb(50,136,189); */
+}
+
+.circ{
+    position: absolute;
+    border-radius: 50%;
 }
 
 .nbar{
@@ -51,4 +40,13 @@ body{
 }
 .nbar:hover{
     background-color: var(--col3) !important;
+}
+
+.math{
+    position: absolute;
+    width: 25vw;
+    /* height: 10vh; */
+    /* line-height: 10vh; */
+    text-align: right;
+    vertical-align: middle;
 }

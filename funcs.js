@@ -5,6 +5,16 @@ function update_circle(x)
         circ[i].style.display = 'none';
     }
     circ[x].style.display = 'block';
+
+    if(x == 1)
+    {
+        var eset = document.getElementsByName('p1_model');
+        for(var i = 0; i < eset.length; i++){ eset[i].style.display = 'block'; }
+    }else{
+        var eset = document.getElementsByName('p1_model');
+        for(var i = 0; i < eset.length; i++){ eset[i].style.display = 'none'; }
+    }
+
     if(x == 2)
     {
         var cvel = document.getElementsByName('cv');
