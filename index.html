@@ -3,26 +3,123 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "cmap.js"></script>
 </head>
 
-<body style = "background: rgb( 50,136,189)">
+<body>
+    <script>
+        document.body.style.backgroundColor = 'rgb(' + cl09[0] + ',' + cl09[1] + ',' + cl09[2] + ')';
+        var wdth = window.innerWidth;
+        var hght = window.innerHeight;
+    </script>
+    <script src = "funcs.js"></script>
+
 </body>
+
 <script>
+
     var temp = document.createElement('div');
-    // temp.style.color = 'rgb( 50,136,189)';
     temp.style.position = 'absolute';
-    temp.style.color = 'white';
-    temp.style.fontFamily = 'courier';
-    temp.style.top = '25vh';
-    temp.style.left = '25vw';
-    temp.style.verticalAlign = 'middle';
+    temp.style.width = '25vw';
+    temp.style.height = '10vh';
+    temp.style.lineHeight = '10vh';
     temp.style.textAlign = 'center';
-    temp.style.lineHeight = '50vh';
-    temp.style.height = '50vh';
-    temp.style.width = '50vw';
-    temp.style.fontSize = '20pt';
-    temp.innerHTML = 'Under construction...';
+    temp.style.verticalAlign = 'middle';
+    temp.style.fontFamily = 'courier';
+    temp.style.fontsize = '24pt';
+    temp.style.top = '45vh';
+    temp.style.left = '37.5vw';
+    temp.style.color = 'white';
+    temp.style.zIndex = 10;
+    temp.innerHTML = "Under construction";
     document.body.appendChild(temp);
+
+    var circ = [];
+    var temp = document.createElement('div');
+    temp.style.position         = 'absolute';
+    temp.style.top              = (hght-0.15*wdth)/2 + 'px';
+    temp.style.left             = (wdth-0.15*wdth)/2 + 'px';
+    temp.style.height           = 0.15*wdth + 'px';
+    temp.style.width            = 0.15*wdth + 'px';
+    temp.style.borderRadius     = '50%';
+    temp.style.background  = "linear-gradient(130deg, " + cols2rgb(cl03,0.75) + "," + cols2rgb(cl09,0.75) + ")";
+    document.body.appendChild(temp);
+    circ.push(temp);
+
+    var temp = document.createElement('div');
+    temp.style.position         = 'absolute';
+    temp.style.top              = (hght-0.15*wdth)/2 + 'px';
+    temp.style.left             = (wdth-0.15*wdth)/2 + 'px';
+    temp.style.height           = 0.15*wdth + 'px';
+    temp.style.width            = 0.15*wdth + 'px';
+    temp.style.borderRadius     = '50%';
+    temp.style.background  = "linear-gradient(210deg, " + cols2rgb(cl03,0.75) + "," + cols2rgb(cl09,0.75) + ")";
+    temp.style.display          = 'none';
+    document.body.appendChild(temp);
+    circ.push(temp);
+
+    var temp = document.createElement('img');
+    temp.style.position     = 'absolute';
+    temp.style.top          = (hght-0.15*wdth)/2 + 'px';
+    temp.style.left         = (wdth-0.15*wdth)/2 + 'px';
+    temp.style.height       = 0.15*wdth + 'px';
+    temp.style.width        = 0.15*wdth + 'px';
+    temp.style.borderRadius = '50%';
+    temp.style.objectFit    = 'cover';
+    temp.style.display      = 'none';
+    temp.src = "jtbw.jpg";
+    document.body.appendChild(temp);
+    circ.push(temp);
+
+    var temp = document.createElement('div');
+    temp.style.position         = 'absolute';
+    temp.style.top              = (hght-0.15*wdth)/2 + 'px';
+    temp.style.left             = (wdth-0.15*wdth)/2 + 'px';
+    temp.style.height           = 0.15*wdth + 'px';
+    temp.style.width            = 0.15*wdth + 'px';
+    temp.style.borderRadius     = '50%';
+    temp.style.background       = "linear-gradient(50deg, " + cmix2rgb(cl08,cl09,0.50,1.00) + "," + cmix2rgb(cl07,cl09,0.05,0.75) + ")";
+    temp.style.display          = 'none'
+    document.body.appendChild(temp);
+    circ.push(temp);
+
+    var nbr1 = document.createElement('div');
+    nbr1.setAttribute('class','nbar')
+    nbr1.style.left = '60vw';
+    nbr1.style.backgroundColor = cmix2rgb(cl03,cl04,0.50,1.00);
+    nbr1.onclick = function(){update_circle(0);}
+    nbr1.innerHTML = 'Home';
+    document.body.appendChild(nbr1);
+
+    var nbr2 = document.createElement('div');
+    nbr2.setAttribute('class','nbar')
+    nbr2.style.left = '70vw';
+    nbr2.style.backgroundColor = cmix2rgb(cl03,cl04,0.75,1.00);
+    nbr2.onclick = function(){update_circle(1);}
+    nbr2.innerHTML = 'Research';
+    document.body.appendChild(nbr2);
+
+    var nbr3 = document.createElement('div');
+    nbr3.setAttribute('class','nbar')
+    nbr3.style.left = '80vw';
+    nbr3.innerHTML = 'CV';
+    nbr3.style.backgroundColor = cmix2rgb(cl08,cl09,0.50,1.00);
+    nbr3.onclick = function(){update_circle(2);}
+    document.body.appendChild(nbr3);
+
+    var nbr4 = document.createElement('div');
+    nbr4.setAttribute('class','nbar')
+    nbr4.style.left = '90vw';
+    nbr4.innerHTML = 'About';
+    nbr4.style.backgroundColor = cmix2rgb(cl08,cl09,0.75,1.00);
+    nbr4.onclick = function(){update_circle(3);}
+    document.body.appendChild(nbr4);
+
+    document.addEventListener('keyup', function(e){ if(e.keyCode == 49){update_circle(0); }});
+    document.addEventListener('keyup', function(e){ if(e.keyCode == 50){update_circle(1); }});
+    document.addEventListener('keyup', function(e){ if(e.keyCode == 51){update_circle(2); }});
+    document.addEventListener('keyup', function(e){ if(e.keyCode == 52){update_circle(3); }});
 </script>
 
 </html>
