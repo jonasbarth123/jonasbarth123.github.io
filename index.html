@@ -30,6 +30,8 @@
     <script src = "funcs.js"></script>
     <script src = "circles.js"></script>
     <script src = "p1_model.js"></script>
+    <!-- <script type="text/javascript" src="cv_entries.json"></script> -->
+    <script src = "page_cv.js"></script>
 
 </body>
 
@@ -84,7 +86,7 @@
     document.body.appendChild(nbr4);
 
     document.addEventListener('keyup', function(e){ if(e.keyCode == 49){update_circle(0); }});
-    document.addEventListener('keyup', function(e){ if(e.keyCode == 50){update_circle(1); }});
+    document.addEventListener('keyup', function(e){ if(e.keyCode == 50){update_circle(1); tradeAnimation(); }});
     document.addEventListener('keyup', function(e){ if(e.keyCode == 51){update_circle(2); }});
     document.addEventListener('keyup', function(e){ if(e.keyCode == 52){update_circle(3); }});
 </script>
