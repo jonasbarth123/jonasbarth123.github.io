@@ -13,6 +13,7 @@ temp.style.left             = '70vw';
 temp.style.height           = 0.15*wdth + 'px';
 temp.style.width            = 0.15*wdth + 'px';
 temp.style.background       = "linear-gradient(60deg, " + cmix2rgb(cl02,[255,255,255],0.75,0.75) + "," + cols2rgb(cl09,0.75) + ")";
+temp.style.display          = 'none';
 document.body.appendChild(temp);
 
 var temp = document.createElement('div');
@@ -23,6 +24,7 @@ temp.style.left             = '70vw';
 temp.style.height           = 0.15*wdth + 'px';
 temp.style.width            = 0.15*wdth + 'px';
 temp.style.background       = "linear-gradient(130deg, " + cmix2rgb(cl08,[255,200,255],0.75,0.75) + "," + cols2rgb(cl09,0.75) + ")";
+temp.style.display          = 'none';
 document.body.appendChild(temp);
 
 
