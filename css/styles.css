@@ -41,6 +41,9 @@ body{
 .nbar:hover{
     background-color: var(--col9) !important;
 }
+.nbar:active{
+    opacity: 0.50 !important;
+}
 
 .math{
     position: absolute;
