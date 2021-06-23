@@ -27,6 +27,8 @@ body{
 }
 
 .nbar{
+    padding: 0;
+    border: none;
     position: absolute;
     top: 0vh;
     width: 10vw;
@@ -41,7 +43,8 @@ body{
 .nbar:hover{
     background-color: var(--col9) !important;
 }
-.nbar:active{
+
+.nbar:focus{
     opacity: 0.50 !important;
 }
 
