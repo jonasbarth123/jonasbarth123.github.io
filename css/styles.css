@@ -18,12 +18,12 @@ body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /* background-color: rgb(50,136,189); */
 }
 
 .circ{
     position: absolute;
     border-radius: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .nbar{
@@ -39,14 +39,12 @@ body{
     font-weight: bold;
 }
 .nbar:hover{
-    background-color: var(--col3) !important;
+    background-color: var(--col9) !important;
 }
 
 .math{
     position: absolute;
     width: 25vw;
-    /* height: 10vh; */
-    /* line-height: 10vh; */
-    text-align: right;
-    vertical-align: middle;
+    text-align: center;
+    vertical-align: baseline;
 }

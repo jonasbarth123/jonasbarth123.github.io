@@ -1,94 +1,31 @@
 <!doctype html>
-<title>JB123</title>
+<title>jb123</title>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src = "cmap.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script>
-    <!-- <script> -->
-    <!-- MathJax.Hub.Config({ -->
-        <!-- extensions: ["tex2jax.js","TeX/AmsMath.js","TeX/AMSsymbols.js"], -->
-        <!-- jax: ["input/TeX","output/HTML-CSS"], -->
-        <!-- tex2jax: { -->
-            <!-- inlineMath: [ ['$','$'], ["\\(","\\)"] ], -->
-            <!-- displayMath: [ ['$$','$$'], ["\\[","\\]"] ], -->
-            <!-- processEscapes: true, -->
-        <!-- }, -->
-        <!-- "HTML-CSS": { availableFonts: ["TeX"] } -->
-    <!-- }); -->
-    <!-- </script> -->
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "js/cmap.js"></script>
+    <script src = "https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type = "text/javascript" id="MathJax-script" async src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script>
 </head>
 
 <body>
-    <script>
-        document.body.style.backgroundColor = 'rgb(' + cl09[0] + ',' + cl09[1] + ',' + cl09[2] + ')';
-        var wdth = window.innerWidth;
-        var hght = window.innerHeight;
-    </script>
-    <script src = "funcs.js"></script>
-    <script src = "circles.js"></script>
-    <script src = "p1_model.js"></script>
+    <script src = "js/init.js"></script>
+    <script src = "js/pageResearch1.js"></script>
+    <div style = "position: absolute; top: 50vh; left: 50vw; font-family: 'courier'; transform: translate(-50%,-50%); background-color: --col1">
+    <!-- <div style = "font-family: 'courier'; top: 50vh; "> -->
+        under construction...
+    </div>
+    <!-- <script src = "funcs.js"></script> -->
+    <!-- <script src = "circles.js"></script> -->
+    <!-- <script src = "p1_model.js"></script> -->
     <!-- <script type="text/javascript" src="cv_entries.json"></script> -->
-    <script src = "page_cv.js"></script>
+    <!-- <script src = "page_cv.js"></script> -->
 
 </body>
 
 <script>
 
-    var temp = document.createElement('div');
-    temp.style.position = 'absolute';
-    temp.style.width = '50vw';
-    temp.style.height = '50vh';
-    temp.style.lineHeight = '50vh';
-    temp.style.textAlign = 'center';
-    temp.style.verticalAlign = 'middle';
-    temp.style.fontFamily = 'courier';
-    temp.style.fontsize = '24pt';
-    temp.style.top = '25vh';
-    temp.style.left = '25vw';
-    temp.style.color = 'white';
-    temp.style.zIndex = 10;
-    temp.innerHTML = "Under construction";
-    document.body.appendChild(temp);
-
-    var nbr1 = document.createElement('div');
-    nbr1.setAttribute('class','nbar')
-    nbr1.style.left = '60vw';
-    nbr1.style.backgroundColor = cmix2rgb(cl03,cl04,0.50,1.00);
-    nbr1.onclick = function(){update_circle(0);}
-    nbr1.innerHTML = 'Home';
-    document.body.appendChild(nbr1);
-
-    var nbr2 = document.createElement('div');
-    nbr2.setAttribute('class','nbar')
-    nbr2.style.left = '70vw';
-    nbr2.style.backgroundColor = cmix2rgb(cl03,cl04,0.75,1.00);
-    nbr2.onclick = function(){update_circle(1);}
-    nbr2.innerHTML = 'Research';
-    document.body.appendChild(nbr2);
-
-    var nbr3 = document.createElement('div');
-    nbr3.setAttribute('class','nbar')
-    nbr3.style.left = '80vw';
-    nbr3.innerHTML = 'CV';
-    nbr3.style.backgroundColor = cmix2rgb(cl08,cl09,0.50,1.00);
-    nbr3.onclick = function(){update_circle(2);}
-    document.body.appendChild(nbr3);
-
-    var nbr4 = document.createElement('div');
-    nbr4.setAttribute('class','nbar')
-    nbr4.style.left = '90vw';
-    nbr4.innerHTML = 'About';
-    nbr4.style.backgroundColor = cmix2rgb(cl08,cl09,0.75,1.00);
-    nbr4.onclick = function(){update_circle(3);}
-    document.body.appendChild(nbr4);
-
-    document.addEventListener('keyup', function(e){ if(e.keyCode == 49){update_circle(0); }});
-    document.addEventListener('keyup', function(e){ if(e.keyCode == 50){update_circle(1); tradeAnimation(); }});
-    document.addEventListener('keyup', function(e){ if(e.keyCode == 51){update_circle(2); }});
-    document.addEventListener('keyup', function(e){ if(e.keyCode == 52){update_circle(3); }});
 </script>
 
 </html>
