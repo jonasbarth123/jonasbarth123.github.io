@@ -37,7 +37,7 @@ document.addEventListener('keyup', function(e){ if(e.keyCode == 50){ initpg02();
 document.addEventListener('keyup', function(e){ if(e.keyCode == 51){ initpg03(); }});
 document.addEventListener('keyup', function(e){ if(e.keyCode == 52){ initpg04(); }});
 
-var temp = document.createElement('div');
+var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '60vw';
@@ -46,7 +46,7 @@ temp.innerHTML = 'home';
 temp.onclick = function(){ initpg01(); }
 document.body.appendChild(temp);
 
-var temp = document.createElement('div');
+var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '70vw';
@@ -55,7 +55,7 @@ temp.onclick = function(){ initpg02(); }
 temp.innerHTML = 'research';
 document.body.appendChild(temp);
 
-var temp = document.createElement('div');
+var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '80vw';
@@ -64,7 +64,7 @@ temp.onclick = function(){ initpg03(); }
 temp.innerHTML = 'cv';
 document.body.appendChild(temp);
 
-var temp = document.createElement('div');
+var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '90vw';
