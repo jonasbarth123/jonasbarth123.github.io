@@ -6,8 +6,8 @@ function drawCircle(c)
 {
     var temp = document.createElement('div');
     temp.setAttribute('class','circ');
-    temp.style.width = wdth > hght ? '15vw' : '15vh';
-    temp.style.height = '15vw';
+    temp.style.width    = wdth > hght ? '15vw' : '15vh';
+    temp.style.height   = wdth > hght ? '15vw' : '15vh';
     temp.style.top = '50vh';
     temp.style.left = '50vw';
     temp.style.background = c;
