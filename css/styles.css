@@ -26,15 +26,15 @@ body{
     transform: translate(-50%,-50%);
 }
 
-.nbar{
+.menu{
     padding: 0;
     border: none;
     position: absolute;
-    top: 0vh;
-    width: 9.9vw;
-    height: 5vh;
-    font-family: 'Open Sans';
-    line-height: 5vh;
+    /* top: 0vh; */
+    /* width: 9.9vw; */
+    /* height: 5vh; */
+    /* font-family: 'Open Sans'; */
+    /* line-height: 5vh; */
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
