@@ -57,18 +57,21 @@ temp.style.backgroundColor = 'transparent';
 temp.style.backgroundColor = cmix2rgb(cl09,clbb,0.50,1.00);
 temp.style.border = 'none';
 temp.style.padding = '0';
+// temp.onmouseover    = function(){ document.getElementById('menutextbox').style.color = cmix2rgb(cl09,clww,0.50,0.75); }
+// temp.onmouseout     = function(){ document.getElementById('menutextbox').style.color = 'transparent'; }
 temp.onclick = function(){ showmenu(); }
 document.body.appendChild(temp);
 
 var temp = document.createElement('button');
+temp.id = 'menutextbox';
 temp.style.position = 'absolute';
 temp.style.left = '95vw';
 temp.style.top = '0vh';
 temp.style.width = '2vw';
 temp.style.height = '3vw';
 temp.style.cursor = 'pointer';
-temp.style.backgroundColor = 'transparent';
 temp.style.backgroundColor = cmix2rgb(cl09,clbb,0.50,1.00);
+temp.style.color = cmix2rgb(cl09,clww,0.50,0.75);
 temp.style.border = 'none';
 temp.style.padding = '0';
 temp.innerHTML = 'menu';

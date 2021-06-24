@@ -30,19 +30,14 @@ body{
     padding: 0;
     border: none;
     position: absolute;
-    /* top: 0vh; */
-    /* width: 9.9vw; */
-    /* height: 5vh; */
-    /* font-family: 'Open Sans'; */
-    /* line-height: 5vh; */
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     font-weight: bold;
 }
-.nbar:hover{
-    background-color: var(--col9) !important;
-}
+/* .menu:hover{ */
+    /* color: 'white' !important; */
+/* } */
 
 .math{
     position: absolute;
