@@ -26,49 +26,60 @@ drawCircle(cols[1]);
 drawCircle(cols[2]);
 drawCircle(cols[3]);
 
-function initpg01(){ for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[0].style.display = 'block'; }
-function initpg02(){ for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[1].style.display = 'block'; }
-function initpg03(){ for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[2].style.display = 'block'; }
-function initpg04(){ for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[3].style.display = 'block'; }
+function initpage(p){
+    var crcs = document.getElementsByClassName('circ');
+    var bars = document.getElementsByClassName('nbar');
+    for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[p].style.display = 'block';
+    for(var i = 0; i < bars.length; i++){ bars[i].style.backgroundColor = cmix2rgb(cl09,cl08,0.80,0.75); } bars[p].style.backgroundColor = cmix2rgb(cl09,clbb,0.75,0.75);
+}
 
-crcs = document.getElementsByClassName('circ');
-document.addEventListener('keyup', function(e){ if(e.keyCode == 49){ initpg01(); }});
-document.addEventListener('keyup', function(e){ if(e.keyCode == 50){ initpg02(); }});
-document.addEventListener('keyup', function(e){ if(e.keyCode == 51){ initpg03(); }});
-document.addEventListener('keyup', function(e){ if(e.keyCode == 52){ initpg04(); }});
-
+var menu = [];
 var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '60vw';
-temp.style.backgroundColor = cols[0].split('deg,')[1].split(',rgba')[0];
+temp.style.backgroundColor = cols[1].split('deg,')[1].split(',rgba')[0];
 temp.innerHTML = 'home';
-temp.onclick = function(){ initpg01(); }
+temp.onclick = function(){ initpage(0); }
 document.body.appendChild(temp);
+menu.push(temp);
 
 var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '70vw';
 temp.style.backgroundColor = cols[1].split('deg,')[1].split(',rgba')[0];
-temp.onclick = function(){ initpg02(); }
+// temp.style.backgroundColor = cols[1].split('deg,')[1].split(',rgba')[0];
+temp.onclick = function(){ initpage(1); }
 temp.innerHTML = 'research';
 document.body.appendChild(temp);
+menu.push(temp);
 
 var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '80vw';
-temp.style.backgroundColor = cols[2].split('deg,')[1].split(',rgba')[0];
-temp.onclick = function(){ initpg03(); }
+temp.style.backgroundColor = cols[1].split('deg,')[1].split(',rgba')[0];
+// temp.style.backgroundColor = cols[2].split('deg,')[1].split(',rgba')[0];
+temp.onclick = function(){ initpage(2); }
 temp.innerHTML = 'cv';
 document.body.appendChild(temp);
+menu.push(temp);
 
 var temp = document.createElement('button');
 temp.setAttribute('class','nbar');
 temp.style.top = '0vh';
 temp.style.left = '90vw';
-temp.style.backgroundColor = cols[3].split('deg,')[1].split(',rgba')[0];
-temp.onclick = function(){ initpg04(); }
+temp.style.backgroundColor = cols[1].split('deg,')[1].split(',rgba')[0];
+// temp.style.backgroundColor = cols[3].split('deg,')[1].split(',rgba')[0];
+temp.onclick = function(){ initpage(3); }
 temp.innerHTML = 'about';
 document.body.appendChild(temp);
+menu.push(temp);
+
+document.addEventListener('keyup', function(e){ if(e.keyCode == 49){ initpage(0); }});
+document.addEventListener('keyup', function(e){ if(e.keyCode == 50){ initpage(1); }});
+document.addEventListener('keyup', function(e){ if(e.keyCode == 51){ initpage(2); }});
+document.addEventListener('keyup', function(e){ if(e.keyCode == 52){ initpage(3); }});
+
+initpage(0);

@@ -31,7 +31,7 @@ body{
     border: none;
     position: absolute;
     top: 0vh;
-    width: 10vw;
+    width: 9.9vw;
     height: 5vh;
     font-family: 'Open Sans';
     line-height: 5vh;
@@ -42,10 +42,6 @@ body{
 }
 .nbar:hover{
     background-color: var(--col9) !important;
-}
-
-.nbar:focus{
-    opacity: 0.50 !important;
 }
 
 .math{
