@@ -45,3 +45,13 @@ body{
     text-align: center;
     vertical-align: baseline;
 }
+
+.lbox{
+    position: absolute;
+    width: 50vw;
+    height: 10vh;
+    /* line-height: 10vh; */
+    z-index: -2;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+}

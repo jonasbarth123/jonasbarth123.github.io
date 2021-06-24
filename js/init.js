@@ -6,7 +6,7 @@ function drawCircle(c)
 {
     var temp = document.createElement('div');
     temp.setAttribute('class','circ');
-    temp.style.width = '15vw';
+    temp.style.width = wdth > hght ? '15vw' : '15vh';
     temp.style.height = '15vw';
     temp.style.top = '50vh';
     temp.style.left = '50vw';
@@ -29,8 +29,11 @@ drawCircle(cols[3]);
 function initpage(p){
     var crcs = document.getElementsByClassName('circ');
     var mbar = document.getElementsByClassName('menu');
+    var elms = document.getElementsByClassName('nam' + p);
     for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[p].style.display = 'block';
     for(var i = 0; i < mbar.length; i++){ mbar[i].style.display = 'none'; }
+    for(var i = 0; i < mbar.length; i++){ mbar[i].style.display = 'none'; }
+
 }
 
 document.addEventListener('keyup', function(e){ if(e.keyCode == 49){ initpage(0); }});
