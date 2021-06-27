@@ -13,6 +13,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 body{
     margin: 0px;
@@ -44,6 +45,18 @@ body{
     width: 25vw;
     text-align: center;
     vertical-align: baseline;
+}
+
+.cbox{
+    position: absolute;
+    width: 5vw;
+    height: 3vh;
+    line-height: 3vh;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    font-family: 'ubuntu', sans-serif;
+    transform: translate(-50%,-50%);
 }
 
 .lbox{

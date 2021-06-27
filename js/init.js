@@ -27,13 +27,14 @@ drawCircle(cols[2]);
 drawCircle(cols[3]);
 
 function initpage(p){
+
     var crcs = document.getElementsByClassName('circ');
     var mbar = document.getElementsByClassName('menu');
     var elms = document.getElementsByClassName('nam' + p);
     for(var i = 0; i < crcs.length; i++){ crcs[i].style.display = 'none'; } crcs[p].style.display = 'block';
     for(var i = 0; i < mbar.length; i++){ mbar[i].style.display = 'none'; }
-    for(var i = 0; i < mbar.length; i++){ mbar[i].style.display = 'none'; }
-
+    if(p == 1){ linearAn(gob1); linearAn(gob2); linearAn(gob3); }else{ var rems = document.getElementsByName('rem1'); while(rems[0]){ rems[0].remove(); }}
+    if(p == 2){ linearAn(gob4); linearAn(gob5); }else{ var rems = document.getElementsByName('rem2'); while(rems[0]){ rems[0].remove(); }}
 }
 
 document.addEventListener('keyup', function(e){ if(e.keyCode == 49){ initpage(0); }});

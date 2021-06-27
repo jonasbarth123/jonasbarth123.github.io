@@ -14,3 +14,4 @@ cl10 = [94, 79,162]
 
 function cols2rgb(carr,a){ return 'rgba(' + carr[0] + ',' + carr[1] + ',' + carr[2] + ',' + a + ')'; }
 function cmix2rgb(col1,col2,w,a){ return 'rgba(' + (w*col1[0]+(1-w)*col2[0]) + ',' + (w*col1[1]+(1-w)*col2[1]) + ',' + (w*col1[2]+(1-w)*col2[2]) + ',' + a + ')'; }
+function linegrad(col1,col2,d,p){ return 'linear-gradient(' + d + ',' + col1 + p[0] + ',' + col2 + p[1] + ')'; }
